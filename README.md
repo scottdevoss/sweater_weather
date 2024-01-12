@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Sweater Weather
 
-Things you may want to cover:
+## Learning Goals
+- Expose an API that aggregates data from multiple external APIs
+- Expose an API that requires an authentication token
+- Expose an API for CRUD functionality
+- Determine completion criteria based on the needs of other developers
+- Test both API consumption and exposure, making use of at least one mocking tool (VCR, Webmock, etc).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Getting Started
+- Clone this Git repository 
+  - https://github.com/scottdevoss/sweater_weather
+- Run 'bundle install'
