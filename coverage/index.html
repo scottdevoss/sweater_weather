@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-01-12T17:40:30-07:00">2024-01-12T17:40:30-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-01-13T13:20:12-07:00">2024-01-13T13:20:12-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>58</b> relevant lines,
-    <span class="green"><b>58</b> lines covered</span> and
+    <b>52</b> relevant lines,
+    <span class="green"><b>52</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -71,11 +71,11 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#2c12cb97668acb8b5745eae4f250eb3b592eae33" class="src_link" title="app/controllers/api/v0/forecast_controller.rb">app/controllers/api/v0/forecast_controller.rb</a></td>
+            <td class="strong t-file__name"><a href="#99b48239c853b580eefcdd6ce74b944bea46cf57" class="src_link" title="app/controllers/api/v0/weather_controller.rb">app/controllers/api/v0/weather_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">15</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">7</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -172,9 +172,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#7fa4effbe1c15c813a35476a4b730d42b7633442" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">2</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -197,9 +197,9 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="2c12cb97668acb8b5745eae4f250eb3b592eae33">
+        <div class="source_table" id="99b48239c853b580eefcdd6ce74b944bea46cf57">
   <div class="header">
-    <h3>app/controllers/api/v0/forecast_controller.rb</h3>
+    <h3>app/controllers/api/v0/weather_controller.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -211,8 +211,8 @@
     
 
     <div class="t-line-summary">
-      <b>15</b> relevant lines.
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>7</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -230,18 +230,18 @@
 
             
 
-            <code class="ruby">class Api::V0::ForecastController &lt; ApplicationController</code>
+            <code class="ruby">class Api::V0::WeatherController &lt; ApplicationController</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="2">
+            
             
 
             
 
-            <code class="ruby">  def show</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -252,7 +252,7 @@
 
             
 
-            <code class="ruby">    location = params[:location]</code>
+            <code class="ruby">  def forecast</code>
           </li>
         </div>
       
@@ -263,7 +263,7 @@
 
             
 
-            <code class="ruby">    conn = Faraday.new(url: &quot;https://www.mapquestapi.com&quot;) do |faraday|</code>
+            <code class="ruby">      conn = Faraday.new(url: &quot;https://www.mapquestapi.com&quot;) do |faraday|</code>
           </li>
         </div>
       
@@ -274,7 +274,7 @@
 
             
 
-            <code class="ruby">      faraday.headers[&quot;API_KEY&quot;] = Rails.application.credentials.mapquest[:key]</code>
+            <code class="ruby">        faraday.headers[&quot;API_KEY&quot;] = Rails.application.credentials.mapquest[:key]</code>
           </li>
         </div>
       
@@ -285,7 +285,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -296,7 +296,7 @@
 
             
 
-            <code class="ruby">    response = conn.get(&quot;/geocoding/v1/address?key=cjGGjAF7SDrvSnRdGQ0KpNik0U0n8l7X&amp;location=Washington,DC&quot;)</code>
+            <code class="ruby">      response = conn.get(&quot;/geocoding/v1/address?key=cjGGjAF7SDrvSnRdGQ0KpNik0U0n8l7X&amp;location=cincinatti,oh&quot;)</code>
           </li>
         </div>
       
@@ -307,7 +307,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
@@ -318,12 +318,34 @@
 
             
 
-            <code class="ruby">    data = JSON.parse(response.body, symbolize_names: true)</code>
+            <code class="ruby">      data = JSON.parse(response.body, symbolize_names: true)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      result = render json:(data)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">     </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -334,68 +356,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="13">
+            
             
 
             
 
-            <code class="ruby">    latitude = 0</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">    longitude = 0</code>
+            <code class="ruby">  # def show</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="15">
+            
             
 
             
 
-            <code class="ruby">    data[:results].each do |result|</code>
+            <code class="ruby">  #   location = params[:location]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="16">
+            
             
 
             
 
-            <code class="ruby">      result[:locations].each do |location|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        latitude += location[:latLng][:lat]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        longitude += location[:latLng][:lng]</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -406,7 +406,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">  #   latitude = 0</code>
           </li>
         </div>
       
@@ -417,18 +417,18 @@
 
             
 
-            <code class="ruby">      latitude</code>
+            <code class="ruby">  #   longitude = 0</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="19">
+            
             
 
             
 
-            <code class="ruby">      longitude</code>
+            <code class="ruby">  #   data[:results].each do |result|</code>
           </li>
         </div>
       
@@ -439,23 +439,89 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  #     result[:locations].each do |location|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="21">
+            
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  #       latitude += location[:latLng][:lat]</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">  #       longitude += location[:latLng][:lng]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">  #     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">  #     latitude</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby">  #     longitude</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">  #   end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">  # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -2382,8 +2448,8 @@
     
 
     <div class="t-line-summary">
-      <b>2</b> relevant lines.
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2456,12 +2522,56 @@
 
             
 
-            <code class="ruby">  get &quot;/api/v0/forecast&quot;, to: &quot;api/v0/forecast#show&quot;</code>
+            <code class="ruby">  namespace :api do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    namespace :v0 do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      get &quot;/forecast&quot;, to: &quot;weather#forecast&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 

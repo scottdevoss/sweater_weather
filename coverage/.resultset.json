@@ -185,13 +185,17 @@
           null,
           null,
           1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/controllers/api/v0/forecast_controller.rb": {
+      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/controllers/api/v0/weather_controller.rb": {
         "lines": [
           1,
-          1,
+          null,
           1,
           1,
           1,
@@ -199,18 +203,21 @@
           1,
           null,
           1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           null,
           null,
-          1,
           null,
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -224,6 +231,6 @@
         ]
       }
     },
-    "timestamp": 1705106430
+    "timestamp": 1705177212
   }
 }

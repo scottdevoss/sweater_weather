@@ -42,9 +42,6 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "pry"
-  gem "rspec-rails"
-  gem "orderly"
-  gem "launchy"
 end
 
 group :development do
@@ -53,9 +50,12 @@ group :development do
 end
 
 group :test do
-  gem "simplecov"
+  gem "rspec-rails"
+  gem 'factory_bot_rails'
+  gem "faker"
   gem "webmock"
-  gem "capybara"
-end 
-
+  gem "vcr"
+  gem "simplecov"
+  gem 'shoulda-matchers', '~> 6.0'
+end
 

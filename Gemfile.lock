@@ -71,15 +71,6 @@ GEM
     bootsnap (1.17.1)
       msgpack (~> 1.2)
     builder (3.2.4)
-    capybara (3.39.2)
-      addressable
-      matrix
-      mini_mime (>= 0.1.3)
-      nokogiri (~> 1.8)
-      rack (>= 1.6.0)
-      rack-test (>= 0.6.3)
-      regexp_parser (>= 1.5, < 3.0)
-      xpath (~> 3.2)
     coderay (1.1.3)
     concurrent-ruby (1.2.2)
     crack (0.4.5)
@@ -92,6 +83,13 @@ GEM
     diff-lcs (1.5.0)
     docile (1.4.0)
     erubi (1.12.0)
+    factory_bot (6.4.5)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.3)
+      factory_bot (~> 6.4)
+      railties (>= 5.0.0)
+    faker (3.2.2)
+      i18n (>= 1.8.11, < 2)
     faraday (2.9.0)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
@@ -105,8 +103,6 @@ GEM
     irb (1.11.1)
       rdoc
       reline (>= 0.4.2)
-    launchy (2.5.2)
-      addressable (~> 2.8)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -116,7 +112,6 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
-    matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
     minitest (5.21.1)
@@ -135,9 +130,6 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.16.0-arm64-darwin)
       racc (~> 1.4)
-    orderly (0.1.1)
-      capybara (>= 1.1)
-      rspec (>= 2.14)
     pg (1.5.4)
     pry (0.14.2)
       coderay (~> 1.1)
@@ -182,14 +174,9 @@ GEM
     rake (13.1.0)
     rdoc (6.6.2)
       psych (>= 4.0.0)
-    regexp_parser (2.9.0)
     reline (0.4.2)
       io-console (~> 0.5)
     rexml (3.2.6)
-    rspec (3.12.0)
-      rspec-core (~> 3.12.0)
-      rspec-expectations (~> 3.12.0)
-      rspec-mocks (~> 3.12.0)
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.3)
@@ -207,6 +194,8 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.1)
+    shoulda-matchers (6.0.0)
+      activesupport (>= 5.2.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -219,6 +208,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uri (0.13.0)
+    vcr (6.2.0)
     webmock (3.19.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -226,8 +216,6 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    xpath (3.2.0)
-      nokogiri (~> 1.8)
     zeitwerk (2.6.12)
 
 PLATFORMS
@@ -235,18 +223,19 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  capybara
   debug
+  factory_bot_rails
+  faker
   faraday
-  launchy
-  orderly
   pg (~> 1.1)
   pry
   puma (~> 5.0)
   rails (~> 7.0.8)
   rspec-rails
+  shoulda-matchers (~> 6.0)
   simplecov
   tzinfo-data
+  vcr
   webmock
 
 RUBY VERSION
