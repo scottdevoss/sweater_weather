@@ -1,6 +1,8 @@
 class Api::V0::WeatherController < ApplicationController
 
   def forecast
+    test = render json: ForecastSerializer.new(params[:id])
+    
     mapquest_data = mapquest_api_call
     weather_data = weather_api_call
 
