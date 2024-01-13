@@ -9,7 +9,7 @@ RSpec.describe "Api::V0::Forecast", type: :request do
       expect(response.status).to eq(200)
       
       result = JSON.parse(response.body, symbolize_keys: true)
-      # require 'pry'; binding.pry
+      
     end 
   end
 end
