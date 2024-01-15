@@ -8,4 +8,15 @@ class Api::V1::MunchiesController < ApplicationController
     data = JSON.parse(response.body, symbolize_names: true)
     require 'pry'; binding.pry
   end
+
+  def reviews
+    conn = Faraday.new(url: "https://api.yelp.com") do |faraday|
+      require 'pry'; binding.pry
+      faraday.headers["yelp"] = Rails.application.credentials.yelp[:key]
+    end
+    response = conn.get("/v3/businesses/north-india-restaurant-san-francisco/reviews")
+    
+    data = JSON.parse(response.body, symbolize_names: true)
+    require 'pry'; binding.pry
+  end
 end
