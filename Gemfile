@@ -55,7 +55,7 @@ group :test do
   gem 'factory_bot_rails'
   gem "faker"
   gem "webmock"
-  gem "vcr"
+  # gem "vcr"
   gem "simplecov"
   gem 'shoulda-matchers', '~> 6.0'
 end

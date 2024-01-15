@@ -3,7 +3,7 @@ class Forecast
 
   def initialize(forecast_data, location)
     @id = nil
-    @forecast_data = forecast
+    @forecast_data = forecast_data
     @location = location
   end
 

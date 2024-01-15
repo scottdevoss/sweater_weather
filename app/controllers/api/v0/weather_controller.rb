@@ -2,6 +2,7 @@ class Api::V0::WeatherController < ApplicationController
 
   def forecast
     @forecast = ForecastFacade.forecast_info(params[:location])
+    # require 'pry'; binding.pry
   end
 
   # def forecast
