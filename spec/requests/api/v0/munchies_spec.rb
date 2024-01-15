@@ -1,9 +1,9 @@
 require "rails_helper"
 
-RSpec.describe "Api::V0::Forecast", type: :request do
+RSpec.describe "Api::V0::Munchies", type: :request do
   describe "Happy path" do
-    xit "generates the forecast based on location" do
-      get "/api/v0/forecast?location=cincinatti,oh"
+    it "will retrieve variable food and forecast information for a destination city" do
+      get "/api/v1/munchies?destination=pueblo,co&food=italian"
 
       expect(response).to be_successful
       expect(response.status).to eq(200)

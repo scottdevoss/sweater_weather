@@ -192,126 +192,25 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/controllers/api/v0/weather_controller.rb": {
+      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/spec/requests/api/v0/munchies_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/facades/forecast_facade.rb": {
-        "lines": [
           1,
           1,
-          1,
-          1,
-          1,
+          null,
+          0,
           0,
           null,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/services/mapquest_service.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
           0,
           null,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/services/weather_service.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
           null,
           null
         ]
       }
     },
-    "timestamp": 1705286513
+    "timestamp": 1705333546
   }
 }
