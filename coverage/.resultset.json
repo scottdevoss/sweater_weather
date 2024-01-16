@@ -189,6 +189,11 @@
           1,
           null,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -200,15 +205,66 @@
           1,
           1,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
           0,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/controllers/api/v1/book_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/sweater_weather/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
           null
         ]
       }
     },
-    "timestamp": 1705421268
+    "timestamp": 1705421746
   }
 }

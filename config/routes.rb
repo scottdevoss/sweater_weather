@@ -8,4 +8,9 @@ Rails.application.routes.draw do
       get "/forecast", to: "weather#forecast"
     end
   end
+  namespace :api do
+    namespace :v1 do
+      get "book-search", to: "book#search"
+    end
+  end
 end
